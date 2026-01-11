@@ -1,3 +1,4 @@
+import os
 from telegram import (
     Update, ReplyKeyboardMarkup, ReplyKeyboardRemove, KeyboardButton
 )
@@ -7,8 +8,6 @@ from telegram.ext import (
     ContextTypes, filters
 )
 from cities import MOLDOVA_CITIES, CHISINAU_DISTRICTS
-
-import os
 
 TOKEN = os.getenv("BOT_TOKEN")
 TEST_CHAT_ID = -1003663485405
@@ -315,4 +314,5 @@ app.add_handler(CommandHandler("start", start))
 app.add_handler(conv_handler)
 
 app.run_polling()
+
 
