@@ -8,7 +8,9 @@ from telegram.ext import (
 )
 from cities import MOLDOVA_CITIES, CHISINAU_DISTRICTS
 
-TOKEN = "8264343172:AAGFk-xsUzaW-KrGQbjiqw0sRS9rZal5tmo"
+import os
+
+TOKEN = os.getenv("BOT_TOKEN")
 TEST_CHAT_ID = -1003663485405
 
 # --- Состояния ---
@@ -313,3 +315,4 @@ app.add_handler(CommandHandler("start", start))
 app.add_handler(conv_handler)
 
 app.run_polling()
+
